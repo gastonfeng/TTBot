@@ -3,15 +3,14 @@
 import copy
 import time
 
-from component.log import getLogger
-from component.dbhelper import Database
-from component.sliderlogin import SliderHelper
-from settings import API_SEARCH,HEADERS,URL_SEARCH_TEST,\
+from .log import getLogger
+from .sliderlogin import SliderHelper
+from ..settings import API_SEARCH,HEADERS,URL_SEARCH_TEST,\
     VALIDATE_CLASS,SEARCH_DRAG
-from util.request import send_request
-from util.search import params_for_search
+from ..util.request import send_request
+from ..util.search import params_for_search
 from bs4 import BeautifulSoup as bs
-from config import SVWEBID,COUNT_SEARCH,SVWEBID_FILE,\
+from ..config import SVWEBID,COUNT_SEARCH,SVWEBID_FILE,\
     MAX_RETRY,MONGODB,IMG_S_BIG_PATH,IMG_S_BLOCK_PATH
 
 logger = getLogger(__name__)
@@ -45,13 +44,13 @@ class Searcher:
         retries = MAX_RETRY
         dbname = MONGODB['search']
 
-        if MDB :
-            if isinstance(MDB, Database) and not MDB.connected:
-                MDB.connect()
-            elif not isinstance(MDB,Database):
-                MDB = Database(MONGODB)
-                MDB.connect()
-            MDB.use_db(dbname)
+        # if MDB :
+        #     if isinstance(MDB, Database) and not MDB.connected:
+        #         MDB.connect()
+        #     elif not isinstance(MDB,Database):
+        #         MDB = Database(MONGODB)
+        #         MDB.connect()
+        #     MDB.use_db(dbname)
         while 1:
             params = params_for_search(keyword,tab=tab,offset=offset)
             response = send_request('get',API_SEARCH,

@@ -1,9 +1,9 @@
 #coding:utf-8
 
-from component.dbhelper import Database
-from component.log import getLogger
-from config import COUNT_HOTNEWS,MAX_RETRY,MONGODB
-from util.request import send_request
+from ..component.dbhelper import Database
+from ..component.log import getLogger
+from ..config import COUNT_HOTNEWS,MAX_RETRY,MONGODB
+from ..util.request import send_request
 from inspect import isfunction
 
 logger = getLogger(__name__)

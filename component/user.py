@@ -1,16 +1,16 @@
 #coding:utf-8
 
-from config import *
-from settings import *
-from util.tools import *
-from component.log import getLogger
-from component.dbhelper import Database
-from deco import force_type
-from deco.user import prepare,choose
-from util.request import send_request
-from util.jstool import payload_for_get
+from ..config import *
+from ..settings import *
+from ..util.tools import *
+from .log import getLogger
+from .dbhelper import Database
+from ..deco import force_type
+from ..deco.user import prepare,choose
+from ..util.request import send_request
+from ..util.jstool import payload_for_get
 from requests.adapters import HTTPAdapter
-from util.user import published_data_cleaner
+from ..util.user import published_data_cleaner
 
 logger = getLogger(__name__)
 

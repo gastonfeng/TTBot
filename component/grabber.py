@@ -2,13 +2,13 @@
 import time
 import queue
 
-from config import *
-from settings import ARTICLE,VIDEO,WEITT
-from component.log import getLogger
-from component.dbhelper import Database
-from component.user import TTUser
-from util.thread import GrabThread
-from util.tools import time_to_date
+from ..config import *
+from ..settings import ARTICLE,VIDEO,WEITT
+from .log import getLogger
+from .dbhelper import Database
+from .user import TTUser
+from ..util.thread import GrabThread
+from ..util.tools import time_to_date
 
 logger = getLogger(__name__)
 
