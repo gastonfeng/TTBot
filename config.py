@@ -1,5 +1,7 @@
 #coding:utf-8
 ## 滑块微调距离
+import os
+
 SLIDER_DEBUG = 25
 
 # ------ 用户账户设置 ------
@@ -81,7 +83,10 @@ MONGODB = {
 FINISHED_TABLE = 'finished_uids'
 
 # ------ selenium相关设置 ------
-CHROME_PATH = 'accessory/chromedriver.exe'
+if os.name == 'nt':
+    CHROME_PATH = 'accessory/chromedriver.exe'
+else:
+    CHROME_PATH = '/usr/bin/chromedriver'
 IMG_BIG_PATH = 'img/big.png'
 IMG_BLOCK_PATH = 'img/block.png'
 IMG_S_BIG_PATH = 'img/big_s.png'
