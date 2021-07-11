@@ -30,7 +30,8 @@ class SliderHelper:
         chrome_options = Options()
         chrome_options.add_argument('--ignore-certificate-errors')
         chrome_options.add_argument('--disable-gpu')
-        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--headless')
+        # chrome_options = webdriver.ChromeOptions()
         self.driver = webdriver.Chrome(executable_path=CHROME_PATH, options=chrome_options)
 
     @inited
