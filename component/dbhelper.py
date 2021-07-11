@@ -7,7 +7,7 @@
 
 import pymongo
 
-from component.log import getLogger
+from .log import getLogger
 from inspect import isfunction
 
 logger = getLogger(__name__)

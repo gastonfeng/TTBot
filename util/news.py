@@ -1,8 +1,8 @@
 #coding:utf-8
 
-from util.jstool import py_to_js,get_ascp
-from util.tools import time_to_date
-from settings import signature_js_func,signature_js_path,ascp_js_func,ascp_js_path,URL_HOST
+from .jstool import py_to_js,get_ascp
+from .tools import time_to_date
+from ..settings import signature_js_func,signature_js_path,ascp_js_func,ascp_js_path,URL_HOST
 
 def params_for_news(max_behot_time,category='news_hot'):
     _signature = py_to_js(signature_js_path, signature_js_func,'', max_behot_time)

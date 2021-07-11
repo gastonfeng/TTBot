@@ -4,15 +4,15 @@ import time
 import cv2
 import copy
 
-from settings import *
-from deco.login import inited
+from ..settings import *
+from ..deco.login import inited
 from selenium import webdriver
-from component.log import getLogger
-from util.tools import format_cookies
-from util.slider import download_img,drag_and_drop,save_cookie
+from .log import getLogger
+from ..util.tools import format_cookies
+from ..util.slider import download_img,drag_and_drop,save_cookie
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup as bs 
-from config import CHROME_PATH,USERNAME,PASSWORD,\
+from ..config import CHROME_PATH,USERNAME,PASSWORD,\
     IMG_BIG_PATH,IMG_BLOCK_PATH,COOKIE_FILE,SLIDER_DEBUG
 
 logger = getLogger(__name__)

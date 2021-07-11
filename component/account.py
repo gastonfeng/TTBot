@@ -6,20 +6,20 @@ import time
 import requests
 import validators
 
-from config import *
-from settings import *
+from ..config import *
+from ..settings import *
 from copy import deepcopy
-from util.jstool import signature_func
-from util.tools import time_to_date
-from util.account import articles_cleaner
+from ..util.jstool import signature_func
+from ..util.tools import time_to_date
+from ..util.account import articles_cleaner
 from urllib3 import encode_multipart_formdata
-from deco.crawl import crawl_helper
-from deco.toutiao import check,login_required,action
-from component.sliderlogin import SliderHelper
-from component.user import TTUser
-from component.dbhelper import Database
-from component.log import getLogger
-from util.account import params_for_favourite,\
+from ..deco.crawl import crawl_helper
+from ..deco.toutiao import check,login_required,action
+from .sliderlogin import SliderHelper
+from .user import TTUser
+# from .dbhelper import Database
+from .log import getLogger
+from ..util.account import params_for_favourite,\
     favourite_cleaner,videos_cleaner
 
 logger = getLogger(__name__)
@@ -28,7 +28,7 @@ class TTAcount:
 
     def __init__(self):
         self.helper = SliderHelper()
-        self.db = Database(MONGODB)
+        # self.db = Database(MONGODB)
         self.session = requests.session()
         self.login_headers = None
         self._account_info = None

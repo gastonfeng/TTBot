@@ -1,16 +1,16 @@
 #coding:utf-8
 
-from component.log import getLogger
-from component.search import Searcher
-from component.account import TTAcount
-from component.timer import Timer
-from component.news import TTNews
-from component.user import TTUser
-from component.grabber import UserGrabber
-from config import COUNT_SEARCH,SVWEBID_FILE,SVWEBID
-from settings import ARTICLE,VIDEO,WEITT
-from util.tools import time_to_date
-from util.user import weitt_cleaner
+from .log import getLogger
+from .search import Searcher
+from .account import TTAcount
+from .timer import Timer
+from .news import TTNews
+from .user import TTUser
+from .grabber import UserGrabber
+from ..config import COUNT_SEARCH,SVWEBID_FILE,SVWEBID
+from ..settings import ARTICLE,VIDEO,WEITT
+from ..util.tools import time_to_date
+from ..util.user import weitt_cleaner
 
 logger = getLogger(__name__)
 

@@ -1,12 +1,12 @@
 #coding:utf-8
 
-from util.user import *
+from ..util.user import *
 from copy import deepcopy
-from component.log import getLogger
-from component.dbhelper import Database
-from config import MONGODB,MAX_RETRY
-from util.request import send_request
-from settings import  HEADERS_USER_ARTICLE,MODE_MAP,\
+from ..component.log import getLogger
+from ..component.dbhelper import Database
+from ..config import MONGODB,MAX_RETRY
+from ..util.request import send_request
+from ..settings import  HEADERS_USER_ARTICLE,MODE_MAP,\
     API_USER_WEITT,API_USER_ARTICLE,HEADERS,APIS
 
 logger = getLogger(__name__)

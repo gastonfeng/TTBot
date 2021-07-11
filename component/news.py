@@ -3,17 +3,17 @@
 import time
 import requests
 
-from component.dbhelper import Database
-from deco.crawl import crawl_helper,choose
-from util.news import params_for_news,data_cleaner
-from util.tools import time_to_date
-from config import COUNT_HOTNEWS,MONGODB
-from settings import API_NEWS_FEED,HEADERS,URL_HOST
+from .dbhelper import Database
+from ..deco.crawl import crawl_helper,choose
+from ..util.news import params_for_news,data_cleaner
+from ..util.tools import time_to_date
+from ..config import COUNT_HOTNEWS,MONGODB
+from ..settings import API_NEWS_FEED,HEADERS,URL_HOST
 
 class TTNews:
 
-    def __init__(self):
-        self.db = Database(MONGODB)
+    # def __init__(self):
+        # self.db = Database(MONGODB)
 
     @property
     def tt_webid(self):

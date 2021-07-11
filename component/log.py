@@ -1,7 +1,8 @@
 #coding:utf-8
 import sys
-import config
 import logging
+
+from ..config import *
 
 __all__ = ['getLogger']
 
@@ -32,14 +33,14 @@ class Logger(object):
 
     @classmethod
     def _get_handlers(cls):
-        enabled = config.LOG_ENABLE
+        enabled = LOG_ENABLE
         handlers = []
         if enabled:
-            _level = config.LOG_LEVEL
-            f_path = config.LOG_FILE_SAVE_PATH
-            encoding = config.LOG_FILE_ENCODING
-            _formatter = config.LOG_FORMAT[_level]
-            _datefmt = config.LOG_DATE_FORMAT
+            _level = LOG_LEVEL
+            f_path = LOG_FILE_SAVE_PATH
+            encoding = LOG_FILE_ENCODING
+            _formatter = LOG_FORMAT[_level]
+            _datefmt = LOG_DATE_FORMAT
             level = getattr(logging,_level)
             formatter = logging.Formatter(_formatter,datefmt=_datefmt)
             if f_path:

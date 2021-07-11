@@ -2,10 +2,10 @@
 
 import os
 
-from component.log import getLogger
-from component.dbhelper import Database
-from util.request import send_request
-from config import COOKIE_FILE,COOKIE
+from ..component.log import getLogger
+from ..component.dbhelper import Database
+from ..util.request import send_request
+from ..config import COOKIE_FILE,COOKIE
 from inspect import isfunction
 
 logger = getLogger(__name__)

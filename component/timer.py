@@ -2,9 +2,9 @@
 
 import time
 
-from component.log import getLogger
-from deco import force_type
-from util.tools import time_to_date,datetime_to_timestamp
+from .log import getLogger
+from ..deco import force_type
+from ..util.tools import time_to_date,datetime_to_timestamp
 
 logger = getLogger(__name__)
 
